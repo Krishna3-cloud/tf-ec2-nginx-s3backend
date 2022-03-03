@@ -8,7 +8,7 @@ resource "aws_internet_gateway" "First_IGW" {
 }
 
 
-resource "aws_route" "Route_Banao" {
+resource "aws_route" "rt1" {
   route_table_id         = aws_vpc.First_VPC.main_route_table_id
   destination_cidr_block = "0.0.0.0/0"
   gateway_id             = aws_internet_gateway.First_IGW.id
